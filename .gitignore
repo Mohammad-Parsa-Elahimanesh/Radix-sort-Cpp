@@ -3,6 +3,7 @@
 # Prerequisites
 *.d
 code
+tester
 
 # Compiled Object files
 *.slo
