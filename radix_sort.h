@@ -9,11 +9,19 @@ inline void radix_sort(_RandomAccessIterator _first, _RandomAccessIterator _last
 	typedef typename iterator_traits<_RandomAccessIterator>::value_type value_type;
 	if(negative)
 	{
-		_RandomAccessIterator _middle = partition(_first, _last, [](value_type a) -> bool {return a<0;});	
-		for(auto it = _first; it != _middle; it++)*it *= -1;
-		radix_sort<false>(_first, _middle, true);
-		for(auto it = _first; it != _middle; it++)*it *= -1;
-		radix_sort<false>(_middle, _last);
+		if(!reverse) {
+			_RandomAccessIterator _middle = partition(_first, _last, [](value_type a) -> bool {return a<0;});	
+			for(auto it = _first; it != _middle; it++)*it *= -1;
+			radix_sort<false>(_first, _middle, true);
+			for(auto it = _first; it != _middle; it++)*it *= -1;
+			radix_sort<false>(_middle, _last);
+		} else {
+			_RandomAccessIterator _middle = partition(_first, _last, [](value_type a) -> bool {return a>=0;});	
+			radix_sort<false>(_first, _middle, true);
+			for(auto it = _middle; it != _last; it++)*it *= -1;
+			radix_sort<false>(_middle, _last);
+			for(auto it = _middle; it != _last; it++)*it *= -1;
+		}
 		return;
 	}
 	constexpr int PART = (1<<BITS);
