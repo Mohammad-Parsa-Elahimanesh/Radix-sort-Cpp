@@ -1,0 +1,36 @@
+for array of size 1000 of 64-bit integers
+radix sort: takes 0.503 ms time.
+cpp sort: takes 0.098 ms time.
+
+for array of size 1000000 of 64-bit integers
+radix sort: takes 84.32 ms time.
+cpp sort: takes 177.304 ms time.
+
+for array of size 100000000 of 64-bit integers
+radix sort: takes 8119.51 ms time.
+cpp sort: takes 21297.8 ms time.
+
+for array of size 1000 of 32-bit integers
+radix sort: takes 0.296 ms time.
+cpp sort: takes 0.088 ms time.
+
+for array of size 1000000 of 32-bit integers
+radix sort: takes 38.482 ms time.
+cpp sort: takes 170.115 ms time.
+
+for array of size 100000000 of 32-bit integers
+radix sort: takes 4418.55 ms time.
+cpp sort: takes 20673.5 ms time.
+
+for array of size 1000 of integers in range [0, 1e6)
+radix sort: takes 0.159 ms time.
+cpp sort: takes 0.098 ms time.
+
+for array of size 1000000 of integers in range [0, 1e6)
+radix sort: takes 17.277 ms time.
+cpp sort: takes 168.051 ms time.
+
+for array of size 100000000 of integers in range [0, 1e6)
+radix sort: takes 2098 ms time.
+cpp sort: takes 17265.4 ms time.
+
